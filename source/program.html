@@ -34,38 +34,47 @@
   <main class="program-main">
     <div class="page-container">
       <h1 class="program-main__title">Подбор программы</h1>
-      <p class="program-main__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="program-main__text">Заполните анкету, и мы подберем</br> программу питания для вашего кота</p>
+    </div>
       <form class="program-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="page-container">
         <fieldset class="program-form__group">
           <legend class="program-form__title visually-hidden">Информация о Вашем коте</legend>
-          <label class="program-form__label">ИМЯ:<sup>*</sup>
-            <input class="program-form__field" type="text" name="cat-name" placeholder="барсик" required>
-          </label>
-          <label class="program-form__label">Вес (кг):<sup>*</sup>
-            <input class="program-form__field" type="number" name="cat-weight" placeholder="7" required>
-          </label>
-          <label class="program-form__label">Возраст (лет):
-            <input class="program-form__field" type="number" name="cat-age" placeholder="7">
-          </label>
+          <p class="program-form__field-wrap">
+            <label class="program-form__label">ИМЯ:<sup>*</sup>
+              <input class="program-form__field program-form__field--name" type="text" name="cat-name" placeholder="барсик" required>
+            </label>
+          </p>
+          <p class="program-form__field-wrap">
+            <label class="program-form__label">Вес (кг):<sup>*</sup>
+              <input class="program-form__field program-form__field--weight" type="number" name="cat-weight" placeholder="7" required>
+            </label>
+          </p>
+          <p class="program-form__field-wrap">
+            <label class="program-form__label">Возраст (лет):
+              <input class="program-form__field program-form__field--age" type="number" name="cat-age" placeholder="7">
+            </label>
+          </p>
         </fieldset>
+        </div>
         <fieldset class="program-form__group">
           <legend class="program-form__title visually-hidden">Цель:</legend>
-          <ul class="program-form__list">
-            <li class="program-form__item">
+          <ul class="program-form__list program-form__list--objective">
+            <li class="program-form__item page-container">
               <label class="control">
                 <input class="visually-hidden control__input" type="radio" name="objective" value="slimming" checked>
                 <span class="control__mark"></span>
                 <span class="control__label">похудение</span>
               </label>
             </li>
-            <li class="program-form__item">
+            <li class="program-form__item page-container">
               <label class="control">
                 <input class="visually-hidden control__input" type="radio" name="objective" value="weight-gain">
                 <span class="control__mark"></span>
                 <span class="control__label">Набор массы</span>
               </label>
             </li>
-            <li class="program-form__item">
+            <li class="program-form__item page-container">
               <label class="control">
                 <input class="visually-hidden control__input" type="radio" name="objective" value="need-advice">
                 <span class="control__mark"></span>
@@ -74,19 +83,24 @@
             </li>
           </ul>
         </fieldset>
+        <div class="page-container">
         <fieldset class="program-form__group">
           <legend class="program-form__title">Контактные данные (владельца кота)</legend>
-          <label class="program-form__label">E-mail:<sup>*</sup>
-            <input class="program-form__field" type="email" name="E-mail" placeholder="kuklachev@gmail.com" required>
-          </label>
-          <label class="program-form__label">Телефон:<sup>*</sup>
-            <input class="program-form__field" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
-          </label>
+          <p class="program-form__field-wrap">
+            <label class="program-form__label">E-mail:<sup>*</sup>
+              <input class="program-form__field program-form__field--email" type="email" name="E-mail" placeholder="kuklachev@gmail.com" required>
+            </label>
+          </p>
+          <p class="program-form__field-wrap">
+            <label class="program-form__label">Телефон:<sup>*</sup>
+              <input class="program-form__field program-form__field--tel" type="tel" name="tel" placeholder="8 (960) 900-60-90" required>
+            </label>
+          </p>
         </fieldset>
         <fieldset class="program-form__group">
           <legend class="program-form__title">Комментарий</legend>
           <label class="program-form__label">
-            <textarea name="comment" id="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
+            <textarea class="program-form__comment" name="comment" id="comment" cols="30" rows="10">Расскажите обо всех повадках кота</textarea>
           </label>
         </fieldset>
         <fieldset class="program-form__group">
@@ -123,9 +137,9 @@
           </ul>
         </fieldset>
         <button class="program-form__button button" type="submit">отправить заявку</button>
-        <span class="program-form__text"><sup>*</sup> — Обязательные поля</span>
+        <p class="program-form__text"><sup>*</sup> — Обязательные поля</p>
+      </div>
       </form>
-    </div>
   </main>
   <footer class="page-footer">
     <div class=page-container>
