@@ -3,25 +3,99 @@
   padding-bottom: 32px;
 }
 
+.page-footer__contacts .page-container {
+  display: flex;
+  justify-content: space-around;
+
+  @media (min-width: @desktop-width) {
+    width: 565px;
+    padding: 56px 80px;
+  }
+}
+
+.contacts__text {
+  margin-right: 12px;
+
+  @media (min-width: @tablet-width) {
+    width: 172px;
+    margin-right: auto;
+  }
+}
+
+.contacts__address {
+  @media (min-width: @tablet-width) {
+    width: 172px;
+    text-align: right;
+  }
+}
+
 .page-footer__info {
   padding-top: 39px;
   padding-bottom: 32px;
   background-color: @base-grey;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 60px 110px;
+  }
 }
 
 .page-footer__logo {
   padding-bottom: 32px;
   border-bottom: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+  }
+}
+
+.logo__image {
+  display: table-cell;
+  margin: 0 auto;
 }
 
 .page-footer__social {
   padding-top: 25px;
   padding-bottom: 25px;
   border-bottom: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+  }
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .social__icon {
   fill: @social;
+}
+
+.social__link--vkontakte {
+  margin-right: 37px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 28px;
+  }
+}
+
+.social__link--instagram {
+  margin-right: 40px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 29px;
+  }
 }
 
 .social__icon--facebook {
@@ -29,8 +103,26 @@
   stroke: @social;
 }
 
+.page-footer__copyright {
+  padding-top: 22px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .copyright__text {
   color: @special-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 22px;
+  }
 }
 
 .copyright__text--icon {
