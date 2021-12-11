@@ -1,8 +1,20 @@
+.program {
+  @media (min-width: @desktop-width) {
+    display: flex;
+  }
+}
+
 .program__block {
   padding: 20px;
   padding-top: 30px;
   margin-bottom: 20px;
   background-color: @base-grey;
+
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    margin-bottom: 70px;
+    padding: 77px 50px 60px;
+  }
 }
 
 .program__title {
@@ -24,7 +36,7 @@
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
-  .black;
+  color: @base-black;
 }
 
 .program__block--slim {
@@ -32,6 +44,10 @@
   background-repeat: no-repeat;
   background-size: 50px 50px;
   background-position: 20px 20px;
+
+  @media (min-width: @desktop-width) {
+    margin-right: 80px;
+  }
 }
 
 .program__block--pro {

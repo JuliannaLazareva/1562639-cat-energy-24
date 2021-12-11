@@ -1,11 +1,14 @@
 .button {
   display: inline-block;
   box-sizing: border-box;
-  min-width: 100%;
   padding: 7px;
   color: @base-white;
   background-color: @base-green;
   text-transform: uppercase;
   text-align: center;
   border: none;
+
+  @media (max-width: @mobile-width-only) {
+    min-width: 100%;
+  }
 }
