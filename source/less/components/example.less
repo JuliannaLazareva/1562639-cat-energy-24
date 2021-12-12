@@ -23,6 +23,11 @@
   font-size: 36px;
   line-height: 40px;
 
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column: 1/2;
     grid-row: 1/2;
@@ -35,6 +40,12 @@
 }
 
 .example__text {
+  @media (min-width: @tablet-width) {
+    width: 436px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
   @media (min-width: @desktop-width) {
     grid-column: 1/2;
     grid-row: 2/3;
@@ -54,6 +65,8 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: 162px 162px;
+    grid-template-rows: auto auto;
+    row-gap: 27px;
   }
 }
 
@@ -70,8 +83,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: 1/2;
-    grid-row: 3/4;
+    grid-column: 1/-1;
+    grid-row: 1/2;
   }
 }
 
@@ -94,12 +107,22 @@
   line-height: 24px;
   color: @base-black;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+  }
 }
 
 .example__parameter {
   font-size: 12px;
   line-height: 12px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
 }
 
 .example__cost {
@@ -111,11 +134,19 @@
     grid-column: 2/3;
     grid-row: 1/-1;
     display: block;
+    padding-top: 15px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    grid-column: 1/-1;
+    grid-row: 2/3;
   }
 }
 
 .example__cost--text {
-  line-height: 20px;
   text-transform: uppercase;
   text-align: center;
   margin-right: 5px;
@@ -127,14 +158,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: 1/2;
-    grid-row: 4/5;
+    margin-right: 63px;
   }
 }
 
 .example__cost--number {
-  line-height: 20px;
-
   @media (min-width: @tablet-width) {
     grid-column: 2/3;
     grid-row: 2/3;
@@ -157,6 +185,13 @@
   }
 }
 
+.example__slider-image {
+  @media (min-width: @tablet-width) {
+    width: 592px;
+    height: 511px;
+  }
+}
+
 .example__slider-label {
   padding-bottom: 48px;
   font-size: 16px;
@@ -166,6 +201,8 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
+    font-size: 20px;
+    line-height: 30px;
     background-color: @example-bg;
   }
 }

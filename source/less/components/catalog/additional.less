@@ -1,32 +1,129 @@
 .additional {
   padding-top: 25px;
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 895px 245px;
+    grid-template-rows: auto;
+    column-gap: 80px;
+  }
 }
 
 .additional__title {
   font-size: 24px;
   line-height: 24px;
   padding-bottom: 36px;
-}
-
-.additional__title,
-.additional__item {
   border-bottom: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 81px;
+    font-size: 36px;
+    line-height: 36px;
+    border: none;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+  }
 }
 
 .additional__list {
   margin-bottom: 35px;
+
+  @media (min-width: @tablet-width) {
+    border: 1px solid @products-card-border;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 895px;
+    border-right: none;
+    border-left: none;
+  }
 }
 
 .additional__item {
   padding-top: 13px;
   padding-bottom: 19px;
+  border-bottom: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 275px 275px;
+    column-gap: 82px;
+    row-gap: 25px;
+    padding: 26px 38px 28px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 288px 287px 244px;
+    column-gap: 38px;
+    padding: 24px 0 14px;
+  }
 }
 
 .additional-products__title {
   margin-bottom: 13px;
+  font-size: 16px;
+  line-height: 16px;
+  text-transform: uppercase;
   color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
 .additional-products__description {
+  display: grid;
+  grid-template-columns: 150px 60px;
+  column-gap: 70px;
   margin-bottom: 15px;
+  line-height: 14px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 160px 70px;
+    column-gap: 40px;
+    margin-bottom: 0;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    column-gap: 57px;
+  }
+}
+
+.additional-products__size {
+  @media (min-width: @tablet-width) {
+    text-align: end;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: start;
+  }
+}
+
+.additional-products__number {
+  text-align: end;
+
+  @media (min-width: @desktop-width) {
+    text-align: start;
+  }
+}
+
+.additional__button {
+  padding: 7px;
+  font-size: 16px;
+  line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-column: 1/-1;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 3/4;
+  }
 }

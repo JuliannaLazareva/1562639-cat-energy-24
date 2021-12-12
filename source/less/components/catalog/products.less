@@ -1,7 +1,45 @@
+.products {
+  margin: 0 auto;
+}
+
+.products__list {
+  display: grid;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 324px 324px;
+    column-gap: 60px;
+    row-gap: 141px;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    row-gap: 143px;
+  }
+}
+
 .products__item {
   padding-top: 19px;
   padding-bottom: 25px;
   border-bottom: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 37px;
+    padding-bottom: 39px;
+    padding-left: 39px;
+    text-align: center;
+    background-color: @base-grey;
+  }
+}
+
+.products__item:last-child {
+  @media (min-width: @tablet-width) {
+    background-color: @base-white;
+    border: 2px solid @base-grey;
+  }
 }
 
 .products__item:last-child h2,
@@ -10,19 +48,86 @@
 }
 
 .card__wrap {
-  margin-bottom: 13px;
+  display: grid;
+  grid-template-columns: 140px 140px;
+  margin-bottom: 22px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: auto;
+    margin-bottom: 33px;
+  }
+}
+
+.card__image {
+  display: table-cell;
+  grid-row: 1/-2;
+  margin: auto;
+  vertical-align: middle;
+}
+
+.card__image--small {
+  @media (min-width: @tablet-width) {
+    width: 161px;
+    height: auto;
+    margin-top: -65px;
+  }
+}
+
+.card__image--big {
+  @media (min-width: @tablet-width) {
+    width: 168px;
+    height: auto;
+    margin-top: -93px;
+  }
 }
 
 .card__title {
+  grid-column: 2/3;
+  width: 76px;
   margin-bottom: 14px;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
   color: @dark-grey;
+
+  @media (min-width: @tablet-width) {
+    width: 150px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.card__title--more {
+  width: auto;
+  padding-top: 125px;
+}
+
+.card__list-wrap {
+  grid-column: 2/-1;
+}
+
+.card__list {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    padding-top: 7px;
+    padding-bottom: 9px;
+    border-bottom: 1px solid @products-card-border;
+  }
 }
 
 .card__text {
   margin-bottom: 21px;
+}
+
+.card__button {
+  padding: 7px;
+  font-size: 16px;
+  line-height: 20px;
 }
 
 .card__button--more {

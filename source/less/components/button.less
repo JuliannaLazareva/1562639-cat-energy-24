@@ -1,7 +1,6 @@
 .button {
   display: inline-block;
   box-sizing: border-box;
-  padding: 7px;
   color: @base-white;
   background-color: @base-green;
   text-transform: uppercase;
@@ -10,5 +9,10 @@
 
   @media (max-width: @mobile-width-only) {
     min-width: 100%;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 20px;
   }
 }
