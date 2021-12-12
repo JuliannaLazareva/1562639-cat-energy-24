@@ -6,10 +6,31 @@
 
 .program-main__title {
   margin-bottom: 41px;
+  font-size: 36px;
+  line-height: 36px;
+
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
 }
 
 .program-main__text {
   margin-bottom: 39px;
   text-transform: uppercase;
   color: @base-black;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 66px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 110px;
+  }
 }
