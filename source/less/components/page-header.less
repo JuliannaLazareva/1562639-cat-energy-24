@@ -1,31 +1,146 @@
 .page-header {
+  position: relative;
   display: flex;
   flex-direction: column;
+  width: auto;
+  min-height: 38px;
   margin: 0 auto;
-  padding-top: 11px;
-  border-bottom: 1px solid @border;
+  padding: 10px 20px 17px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    padding-top: 42px;
+    height: 52px;
+    padding: 24px 30px;
+    //padding-top: 42px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-top: 69px;
+    height: 59px;
+    padding: 53px 110px;
+    //padding-top: 69px;
   }
 }
 
 .page-header__logo {
-  padding-bottom: 17px;
+  height: 38px;
+  //padding: 10px 20px 17px;
+  //border-bottom: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 59px;
+  }
+}
+
+.page-header__logo img {
+  width: 191px;
+  height: 38px;
 }
 
 .main-nav {
-  width: 100%;
+  width: auto;
+  background-color: @base-white;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: rgba(104, 183, 56, 0.85);
+  }
 }
 
 .main-nav__toggle {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 38px;
+  background-color: @base-white;
+  cursor: pointer;
+  border: none;
+
+  &:hover,
+  &:active {
+    opacity: 0.6;
+  }
+
   @media (min-width: @tablet-width) {
     display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 13px;
+  width: 24px;
+  height: 2px;
+  background-color: @base-black;
+  box-shadow: 0 8px 0 0 @base-black, 0 16px 0 0 @base-black;
+}
+
+.main-nav--closed .main-nav__toggle:active::before {
+  background-color: fade(@base-black, 30%);
+  box-shadow:
+    0 8px 0 0 fade(@base-black, 30%),
+    0 16px 0 0 fade(@base-black, 30%);
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--opened .main-nav__list {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    left: 0;
+    z-index: 10;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    position: static;
+    display: block;
+    min-height: 0;
+  }
+}
+
+.main-nav--opened .main-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 12px;
+    width: 25px;
+    height: 2px;
+    background-color: @base-black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@base-black, 30%);
   }
 }
 
@@ -37,30 +152,80 @@
   }
 }
 
-.main-nav__item a {
-  font-weight: 500;
-  color: @base-black;
+.main-nav__list:last-child {
+  border-bottom: 1px solid @border;
+
+  @media (min-width: @tablet-width) {
+    border: none;
+  }
 }
 
 .main-nav__item {
+  position: relative;
+  text-align: center;
+
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+
+  //@media (min-width: @desktop-width) {
+  //font-size: 20px;
+  //line-height: 30px;
+  //}
+}
+
+.main-nav__item--current::before {
+  position: absolute;
+  right: 2px;
+  bottom: -2px;
+  left: 35px;
+  height: 2px;
+  background-color: @base-green;
+  content: "";
+
+  @media (min-width: @desktop-width) {
+    background-color: @base-white;
+  }
+}
+
+.main-nav__item a[href] {
+  @media (min-width: @tablet-width) {
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+}
+
+.main-nav__list a {
+  position: relative;
   padding-top: 22px;
   padding-bottom: 24px;
   font-size: 20px;
   line-height: 20px;
+  font-weight: 500;
   text-transform: uppercase;
-  text-align: center;
-  border-bottom: 1px solid @border;
+  color: @base-black;
+  background-color: @base-white;
+  border-top: 1px solid @border;
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    padding-top: 18px;
+    padding-bottom: 8px;
+    margin-left: 33px;
     font-size: 18px;
     line-height: 24px;
+    font-weight: 400;
     border: none;
-    margin-left: 33px;
   }
 
   @media (min-width: @desktop-width) {
-    font-size: 20px;
-    line-height: 30px;
+    padding-top: 16px;
+    color: @base-white;
+    background-color: inherit;
   }
 }

@@ -10,6 +10,7 @@
 
   @media (min-width: @desktop-width) {
     padding-bottom: 182px;
+    padding-left: 80px;
   }
 }
 
@@ -25,11 +26,14 @@
 
   @media (min-width: @tablet-width) {
     min-height: auto;
+    padding: 40px 0;
     background-image: none;
   }
 
   @media (min-width: @desktop-width) {
     height: 606px;
+    padding: 55px 0;
+    margin-top: -165px;
     background-image: linear-gradient(0deg, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/promo-background.jpg");
     background-repeat: no-repeat;
     background-size: 694px, 694px;
@@ -40,6 +44,11 @@
 .promo__content {
   @media (min-width: @tablet-width) {
     padding-left: 87px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 150px;
+    //margin-left: 80px;
   }
 }
 
@@ -53,10 +62,6 @@
     margin-bottom: 41px;
     font-size: 60px;
     line-height: 60px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 114px;
   }
 }
 
@@ -91,12 +96,14 @@
   @media (min-width: @desktop-width) {
     width: 552px;
     height: 499px;
-    margin-top: -612px;
-    margin-right: 185px;
+    margin-top: -580px;
+    margin-right: 250px;
   }
 }
 
 .promo__link {
+  padding: 7px 0;
+
   @media (min-width: @tablet-width) {
     position: absolute;
     top: 29px;

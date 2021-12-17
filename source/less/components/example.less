@@ -9,13 +9,27 @@
   }
 
   @media (min-width: @desktop-width) {
+    //display: flex;
     display: grid;
-    grid-template-columns: 436px 592px;
+    grid-template-columns: 1fr 1fr;//436px 592px;
     grid-template-rows: repeat(4, auto);
-    column-gap: 194px;
+    column-gap: 15%;
     padding: 0 110px;
     background-color: @example-bg;
   }
+}
+
+//.example .page-container {
+  //@media (min-width: @desktop-width) {
+    //display: grid;
+    //grid-template-columns: 1fr 1fr;//436px 592px;
+    //grid-template-rows: repeat(4, auto);
+    //column-gap: 15%;
+  //}
+//}
+.example .page-container {
+  grid-column: 1/2;
+  grid-row: 1/-1;
 }
 
 .example__title {
@@ -28,20 +42,20 @@
     line-height: 60px;
   }
 
-  @media (min-width: @desktop-width) {
-    grid-column: 1/2;
-    grid-row: 1/2;
-  }
+  //@media (min-width: @desktop-width) {
+    //grid-column: 1/2;
+    //grid-row: 1/2;
+  //}
 }
 
-.example__text,
+.example__content,
 .example__list {
   margin-bottom: 20px;
 }
 
-.example__text {
+.example__content {
   @media (min-width: @tablet-width) {
-    width: 436px;
+    max-width: 436px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -88,40 +102,70 @@
   }
 }
 
-.example-list--weight {
+.example__list--weight {
   @media (min-width: @tablet-width) {
     grid-column: 1/2;
   }
 }
 
-.example-list--day {
+.example__list--day {
   @media (min-width: @tablet-width) {
     grid-column: 2/3;
   }
 }
 
+.example__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .example__value {
-  width: 124px;
-  padding: 15px 20px;
   font-size: 24px;
   line-height: 24px;
   color: @base-black;
   text-align: center;
+  border: 1px solid @products-card-border;
+  border-radius: 3px;
 
   @media (min-width: @tablet-width) {
     font-size: 30px;
     line-height: 37px;
   }
+
+  &--weight {
+    padding: 15px 42px;
+
+    @media (min-width: @tablet-width) {
+      padding: 15px 56px 20px;
+    }
+  }
+
+  &--day {
+    padding: 15px 20px;
+
+    @media (min-width: @tablet-width) {
+      padding: 15px 29px 20px;
+    }
+  }
 }
 
 .example__parameter {
+  padding: 0 14px;
+  margin-top: -12px;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
+  background-color: @example-bg;
 
   @media (min-width: @tablet-width) {
     font-size: 14px;
     line-height: 14px;
+    background-color: @base-white;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: @example-bg;
   }
 }
 
@@ -146,7 +190,7 @@
   }
 }
 
-.example__cost--text {
+.example__text {
   text-transform: uppercase;
   text-align: center;
   margin-right: 5px;
@@ -162,7 +206,7 @@
   }
 }
 
-.example__cost--number {
+.example__number {
   @media (min-width: @tablet-width) {
     grid-column: 2/3;
     grid-row: 2/3;

@@ -9,11 +9,11 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header page-container">
+  <header class="page-header">
     <a class="page-header__logo">
       <img src="img/header-logo.svg" width="191" height="38" alt="CAT ENERGY">
     </a>
-    <nav class="main-nav">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -75,27 +75,27 @@
     <section class="example">
       <div class="page-container">
         <h2 class="example__title">Живой пример</h2>
-        <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+        <p class="example__content">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
           Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16
           часов в день.</p>
         <div class="example__information">
           <ul class="example__list-wrap">
             <li class="example__list  example__list--weight">
               <ul class="example__item">
-                <li class="example__value">5 КГ</li>
+                <li class="example__value example__value--weight">5 КГ</li>
                 <li class="example__parameter">снижение</br> веса</li>
               </ul>
             </li>
             <li class="example__list example__list--day">
               <ul class="example__item">
-                <li class="example__value">60 ДНЕЙ</li>
+                <li class="example__value example__value--day">60 ДНЕЙ</li>
                 <li class="example__parameter">затрачено</br> времени</li>
               </ul>
             </li>
           </ul>
           <div class="example__cost">
-            <p class="example__cost--text">Затраты на питание:</p>
-            <p class="example__cost--number">15 000 РУБ.</p>
+            <p class="example__text">Затраты на питание:</p>
+            <p class="example__number">15 000 РУБ.</p>
           </div>
         </div>
       </div>
@@ -112,7 +112,7 @@
   <footer class="page-footer">
     <section class="page-footer__contacts contacts">
       <h2 class="visually-hidden">Наш адрес</h2>
-      <div class="page-container">
+      <div class="contacts__container">
         <p class="contacts__text">приглашаем к сотрудничеству дилеров!</p>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
@@ -162,7 +162,7 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">HTML Academy</span>
-            <svg class="copyright__text--icon" width="27" height="34" viewbox="0 0 60 60" aria-hidden="true"
+            <svg class="copyright__icon" width="27" height="34" viewbox="0 0 60 60" aria-hidden="true"
               focusable="false" xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M30.2 5H30L10.3 7.1v36.2L30 55l19.7-11.7V7.1L30.2 5zm17 36.8L30 52 12.8 41.8V27l17.1 10.2V39l-11.7-7v1.8L30 40.9v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8L29.9 12.8 12.8 23V9.4L30 7.6l17.2 1.8V23z" />
@@ -173,6 +173,22 @@
     </section>
     </section>
   </footer>
+  <script>
+    var navMain = document.querySelector('.main-nav');
+    var navToggle = document.querySelector('.main-nav__toggle');
+
+    navMain.classList.remove('main-nav--nojs');
+
+    navToggle.addEventListener('click', function() {
+      if (navMain.classList.contains('main-nav--closed')) {
+        navMain.classList.remove('main-nav--closed');
+        navMain.classList.add('main-nav--opened');
+      } else {
+        navMain.classList.add('main-nav--closed');
+        navMain.classList.remove('main-nav--opened');
+      }
+    });
+  </script>
 </body>
 
 </html>
