@@ -85,7 +85,9 @@
 }
 
 .features__item--natural::after {
-  content: "1";
+  @media (min-width: @tablet-width) {
+    content: "1";
+  }
 }
 
 
@@ -94,7 +96,9 @@
 }
 
 .features__item--cooking::after {
-  content: "2";
+  @media (min-width: @tablet-width) {
+    content: "2";
+  }
 }
 
 .features__item--application::before {
@@ -102,7 +106,9 @@
 }
 
 .features__item--application::after {
-  content: "3";
+  @media (min-width: @tablet-width) {
+    content: "3";
+  }
 }
 
 .features__item--result::before {
@@ -110,5 +116,7 @@
 }
 
 .features__item--result::after {
-  content: "4";
+  @media (min-width: @tablet-width) {
+    content: "4";
+  }
 }
