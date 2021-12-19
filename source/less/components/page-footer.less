@@ -1,21 +1,61 @@
 .page-footer {
-  padding-top: 26px;
+  position: relative;
 }
 
-.page-footer__contacts {
-  @media (min-width: @desktop-width) {
-    padding: 0 110px;
+.contacts iframe {
+  display: block;
+  width: 100%;
+  height: 362px;
+  border: none;
+
+  @media (min-width: @tablet-width) {
+    height: 400px;
   }
 }
 
-.page-footer__contacts .page-container {
+.contacts__container {
   display: flex;
   justify-content: space-around;
+  padding: 20px 26px;
+  line-height: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 60px 70px 56px;
+  }
 
   @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 95px;
+    justify-content: flex-start;
     width: 565px;
-    padding: 56px 80px;
+    padding: 60px 80px 56px;
     margin: 0;
+    margin-left: 110px;
+    background-color: @base-white;
+  }
+}
+
+.contacts__text {
+  margin-right: 12px;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: #111111;
+
+  @media (min-width: @tablet-width) {
+    width: 172px;
+    margin-right: auto;
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.contacts__address {
+  font-style: normal;
+
+  @media (min-width: @tablet-width) {
+    width: 200px;
+    text-align: right;
+    font-size: 20px;
   }
 }
 
@@ -39,6 +79,14 @@
   @media (min-width: @tablet-width) {
     padding: 0;
     border: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -66,6 +114,14 @@
 
 .social__icon {
   fill: @social;
+
+  &:hover {
+    fill: @base-green;
+  }
+
+  &:active {
+    fill: fade(@base-green, 30%);
+  }
 }
 
 .social__link--vkontakte {
@@ -87,6 +143,15 @@
 .social__icon--facebook {
   fill: none;
   stroke: @social;
+
+  &:hover {
+    fill: none;
+    stroke: @base-green;
+  }
+
+  &:active {
+    stroke: fade(@base-green, 30%);
+  }
 }
 
 .page-footer__copyright {
@@ -101,6 +166,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link:hover .copyright__icon {
+  fill: @base-green;
 }
 
 .copyright__text {
@@ -111,6 +184,6 @@
   }
 }
 
-.copyright__text--icon {
+.copyright__icon {
   fill: @social;
 }
