@@ -1,19 +1,19 @@
 .additional__present {
-  min-width: 280px;
-  height: 290px;
+  position: relative;
+  min-width: 245px;
+  min-height: 290px;
   background-image: linear-gradient(0deg, rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/catalog/present_bg.jpg");
   background-repeat: no-repeat;
   background-size: cover, contain;
   background-position: center;
 
   @media (min-width: @tablet-width) {
-    height: 200px;
+    min-height: 200px;
     background-size: cover;
   }
 
   @media (min-width: @desktop-width) {
-    width: 245px;
-    height: 289px;
+    min-height: 290px;
   }
 }
 
@@ -37,5 +37,25 @@
     margin: 0 auto;
     padding: 0;
     padding-top: 185px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 59px;
+    left: 50%;
+    transform: translateX(-39px);
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/present-icon.svg");
+    content: "";
+
+    @media (min-width: @tablet-width) {
+      left: 90px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 50%;
+      transform: translateX(-39px);
+    }
   }
 }

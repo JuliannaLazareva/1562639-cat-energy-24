@@ -6,11 +6,13 @@
   min-height: 38px;
   margin: 0 auto;
   padding: 10px 20px 17px;
+  border-bottom: 1px solid @border;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
     min-height: 52px;
     padding: 24px 30px;
+    border: none;
   }
 
   @media (min-width: @desktop-width) {
@@ -48,6 +50,14 @@
   @media (min-width: @desktop-width) {
     max-width: 610px;
     background-color: rgba(104, 183, 56, 0.85);
+
+    &--inner {
+      background-color: @base-white;
+    }
+
+    &--inner .main-nav__list a {
+      color: @base-black;
+    }
   }
 }
 
@@ -178,6 +188,12 @@
 
   @media (min-width: @desktop-width) {
     background-color: @base-white;
+  }
+}
+
+.main-nav--inner .main-nav__item--current::before {
+  @media (min-width: @desktop-width) {
+    background-color: @base-green;
   }
 }
 

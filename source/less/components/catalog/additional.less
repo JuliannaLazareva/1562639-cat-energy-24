@@ -6,10 +6,12 @@
     grid-template-columns: 895px 245px;
     grid-template-rows: auto;
     column-gap: 80px;
+    padding-bottom: 50px;
   }
 }
 
 .additional__title {
+  position: relative;
   font-size: 24px;
   line-height: 24px;
   padding-bottom: 36px;
@@ -17,6 +19,7 @@
 
   @media (min-width: @tablet-width) {
     padding-bottom: 81px;
+    padding-left: 37px;
     font-size: 36px;
     line-height: 36px;
     border: none;
@@ -25,6 +28,46 @@
   @media (min-width: @desktop-width) {
     grid-column: 1/-1;
     grid-row: 1/2;
+  }
+
+  &::before {
+    position: absolute;
+    top: 11px;
+    left: 250px;
+    right: -20px;
+    height: 2px;
+    background-color: #68b738;
+    content: "";
+
+    @media (min-width: @tablet-width) {
+      left: 415px;
+      top: 22px;
+      right: -30px;
+    }
+
+    @media (min-width: @desktop-width) {
+      left: 415px;
+      top: 25px;
+      right: -110px;
+    }
+  }
+
+  &::after {
+    @media (min-width: @tablet-width) {
+      position: absolute;
+      top: 22px;
+      left: -9999px;
+      right: 708px;
+      height: 2px;
+      background-color: #68b738;
+      content: "";
+    }
+
+    @media (min-width: @desktop-width) {
+      top: 25px;
+      //left: -110px;
+      right: 1220px;
+    }
   }
 }
 
@@ -37,12 +80,14 @@
 
   @media (min-width: @desktop-width) {
     width: 895px;
+    margin-bottom: 0;
     border-right: none;
     border-left: none;
   }
 }
 
 .additional__item {
+  position: relative;
   padding-top: 13px;
   padding-bottom: 19px;
   border-bottom: 1px solid @border;
@@ -59,6 +104,28 @@
     grid-template-columns: 288px 287px 244px;
     column-gap: 38px;
     padding: 24px 0 14px;
+  }
+
+  &::before {
+    position: absolute;
+    top: -1px;
+    bottom: 1px;
+    left: -20px;
+    right: 0;
+    content: "";
+    height: 1px;
+    background-color: @border;
+  }
+
+  &::after {
+    position: absolute;
+    top: -1px;
+    bottom: 1px;
+    left: 0;
+    right: -20px;
+    content: "";
+    height: 1px;
+    background-color: @border;
   }
 }
 
