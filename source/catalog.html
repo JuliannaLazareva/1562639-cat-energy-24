@@ -13,15 +13,15 @@
       <a class="page-header__logo" href="index.html">
         <img src="img/header-logo.svg" width="191" height="38" alt="CAT ENERGY">
       </a>
-      <nav class="main-nav main-nav--closed main-nav--nojs">
+      <nav class="main-nav main-nav--inner main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
         <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--current">
+          <li class="main-nav__item">
             <a href="index.html">главная</a>
           </li>
-          <li class="main-nav__item">
+          <li class="main-nav__item  main-nav__item--current">
             <a>каталог продукции</a>
           </li>
           <li class="main-nav__item">
@@ -31,7 +31,7 @@
       </nav>
   </header>
   <main class="catalog-main">
-    <div class="page-container">
+    <div class="catalog-container page-container">
       <h1 class="catalog-main__title">Каталог продукции</h1>
       <section class="products">
         <ul class="products__list">
@@ -289,11 +289,14 @@
   <footer class="page-footer">
     <section class="page-footer__contacts contacts">
       <h2 class="visually-hidden">Наш адрес</h2>
-      <div class="page-container">
+      <div class="contacts__container">
         <p class="contacts__text">приглашаем к сотрудничеству дилеров!</p>
         <address class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
       </div>
-      <!--<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A41b94bb892460939f19d98cca89719a53abdbd274c69c5ade45dc96a30ef8275&amp;source=constructor" width="100%" height="362" frameborder="0"></iframe>-->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1998.6037861610246!2d30.3208587!3d59.9387165!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sby!4v1639903883297!5m2!1sru!2sby"
+        width="600" height="450" style="border: 0;" allowfullscreen="" loading="lazy">
+      </iframe>
     </section>
     <section class="page-footer__info">
       <div class="page-container">
@@ -339,8 +342,8 @@
         <div class="page-footer__copyright copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">HTML Academy</span>
-            <svg class="copyright__icon" width="27" height="34" viewbox="0 0 60 60" aria-hidden="true"
-              focusable="false" xmlns="http://www.w3.org/2000/svg">
+            <svg class="copyright__icon" width="27" height="34" viewbox="0 0 60 60" aria-hidden="true" focusable="false"
+              xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M30.2 5H30L10.3 7.1v36.2L30 55l19.7-11.7V7.1L30.2 5zm17 36.8L30 52 12.8 41.8V27l17.1 10.2V39l-11.7-7v1.8L30 40.9v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8L29.9 12.8 12.8 23V9.4L30 7.6l17.2 1.8V23z" />
             </svg>
