@@ -11,7 +11,11 @@
 <body class="page__body">
   <header class="page-header">
     <a class="page-header__logo">
-      <img src="img/header-logo.svg" width="191" height="38" alt="CAT ENERGY">
+      <picture>
+        <source media="(min-width: 1440px)" srcset="img/header-logo-desktop.svg">
+        <source media="(min-width: 768px)" srcset="img/header-logo-tablet.svg">
+        <img src="img/header-logo-mobile.svg" width="191" height="38" alt="CAT ENERGY">
+      </picture>
     </a>
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
@@ -39,7 +43,11 @@
         <p class="promo__text">Занялся собой? Займись котом!</p>
       </div>
       <div class="promo__image-wrap">
-        <img class="promo__image" src="img/functional-nutrition.png" width="280" height="270" alt="">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/functional-nutrition-desktop.png 1x, img/functional-nutrition-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/functional-nutrition-tablet.png 1x, img/functional-nutrition-tablet@2x.png 2x">
+          <img class="promo__image" src="img/functional-nutrition-mobile.png" srcset="img/functional-nutrition-mobile@2x.png 2x" width="280" height="270" alt="">
+        </picture>
         <a class="promo__link button" href="program.html">подобрать программу</a>
       </div>
     </section>
@@ -99,8 +107,11 @@
         </div>
       </div>
       <div class="example__slidecontainer">
-        <img class="example__slider-image" src="img/cat-before.png" width="280" height="232"
-          alt="кот Борис 2 месяца назад">
+        <picture>
+          <source media="(min-width: 768px)" srcset="img/image_cat_tablet.png 1x, img/image_cat_tablet@2x.png 2x">
+          <img class="example__slider-image" src="img/cat-before-mobile.png" srcset="img/cat-before-mobile@2x.png 2x" width="280" height="232"
+            alt="кот Борис 2 месяца назад">
+        </picture>
         <label class="example__slider-label">
           было<input class="example__slider" id="examle-range" type="range" min="1" max="3" value="1" step="1">стало
         </label>
