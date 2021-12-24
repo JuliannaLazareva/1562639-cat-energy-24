@@ -6,12 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>HTML Academy: Кэт энерджи каталог</title>
   <link href="css/style.css" rel="stylesheet">
+  <link rel="icon" href="favicon.ico"><!-- 16×16 -->
+  <link rel="icon" href="img/favicons/favicon32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/favicon152.png"> <!-- 152×152 -->
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 
 <body class="page__body">
   <header class="page-header page-container">
       <a class="page-header__logo" href="index.html">
-        <img src="img/header-logo.svg" width="191" height="38" alt="CAT ENERGY">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/header-logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/header-logo-tablet.svg">
+          <img src="img/header-logo-mobile.svg" width="191" height="38" alt="CAT ENERGY">
+        </picture>
       </a>
       <nav class="main-nav main-nav--inner main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button">

@@ -12,6 +12,10 @@
   margin-bottom: 20px;
   background-color: @base-grey;
 
+  @media (min-width: @tablet-width) {
+    padding: 77px 316px 57px 52px;
+  }
+
   @media (min-width: @desktop-width) {
     margin-bottom: 70px;
     padding: 77px 50px 60px;
@@ -19,15 +23,21 @@
 }
 
 .program__title {
-  margin-left: 90px;
+  padding-left: 90px;
   margin-bottom: 30px;
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
+    padding-left: 0;
     font-size: 36px;
     line-height: 36px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 155px;
+    margin-bottom: 73px;
   }
 }
 
@@ -40,6 +50,7 @@
   @media (min-width: @tablet-width) {
     font-size: 16px;
     line-height: 24px;
+    border: none;
   }
 }
 
@@ -85,6 +96,16 @@
   background-repeat: no-repeat;
   background-size: 50px 50px;
   background-position: 20px 20px;
+
+  @media (min-width: @tablet-width) {
+    background-size: 200px 211px;
+    background-position: right 62px center;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-size: 100px 106px;
+    background-position: left 52px top 41px;
+  }
 }
 
 .program__block--pro {
@@ -92,4 +113,14 @@
   background-repeat: no-repeat;
   background-size: 67px 50px;
   background-position: 13px 24px;
+
+  @media (min-width: @tablet-width) {
+    background-size: 268px 200px;
+    background-position: right 28px top 90px;
+  }
+
+  @media (min-width: @desktop-width) {
+    background-size: 134px 100px;
+    background-position: left 33px top 47px;
+  }
 }
