@@ -2,10 +2,6 @@
   padding-top: 25px;
 
   @media (min-width: @desktop-width) {
-    display: grid;
-    grid-template-columns: 895px 245px;
-    grid-template-rows: auto;
-    column-gap: 80px;
     padding-bottom: 50px;
   }
 }
@@ -65,9 +61,15 @@
 
     @media (min-width: @desktop-width) {
       top: 25px;
-      //left: -110px;
       right: 1220px;
     }
+  }
+}
+
+.additional__wrap {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -79,8 +81,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 895px;
+    max-width: 895px;
     margin-bottom: 0;
+    margin-right: 80px;
     border-right: none;
     border-left: none;
   }
@@ -187,10 +190,17 @@
   line-height: 20px;
 
   @media (min-width: @tablet-width) {
-    grid-column: 1/-1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    min-width: 100%;
   }
 
   @media (min-width: @desktop-width) {
-    grid-column: 3/4;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
   }
 }
