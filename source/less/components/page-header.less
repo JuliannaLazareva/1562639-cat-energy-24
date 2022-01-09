@@ -209,13 +209,15 @@
 }
 
 .main-nav__item--current::before {
-  position: absolute;
-  right: 2px;
-  bottom: -2px;
-  left: 35px;
-  height: 2px;
-  background-color: @base-green;
-  content: "";
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    right: 2px;
+    bottom: -2px;
+    left: 35px;
+    height: 2px;
+    background-color: @base-green;
+    content: "";
+  }
 
   @media (min-width: @desktop-width) {
     background-color: @base-white;

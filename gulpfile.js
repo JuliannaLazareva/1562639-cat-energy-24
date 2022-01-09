@@ -48,7 +48,7 @@ const scripts = () => {
     .pipe(terser())
     .pipe(rename("script.min.js"))
     .pipe(gulp.dest("build/js"))
-    //.pipe(sync.stream());
+    .pipe(sync.stream());
 }
 
 exports.scripts = scripts;
