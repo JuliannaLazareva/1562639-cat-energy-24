@@ -2,21 +2,22 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  width: auto;
+  max-width: 280px;
   min-height: 38px;
   margin: 0 auto;
-  padding: 10px 20px 17px;
+  padding: 10px 20px 0;
   border-bottom: 1px solid @border;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    max-width: 708px;
     min-height: 52px;
     padding: 24px 30px;
     border: none;
   }
 
   @media (min-width: @desktop-width) {
-    width: 1220px;
+    max-width: 1220px;
     min-height: 59px;
     padding: 53px 110px;
   }
@@ -24,6 +25,7 @@
 
 .page-header__logo {
   height: 38px;
+  padding-bottom: 17px;
 
   @media (min-width: @tablet-width) {
     height: 52px;
@@ -80,7 +82,7 @@
 
   @media (min-width: @desktop-width) {
     max-width: 610px;
-    background-color: rgba(104, 183, 56, 0.85);
+    background-color: rgba(104, 183, 56, 0);
 
     &--inner {
       background-color: @base-white;
@@ -94,8 +96,8 @@
 
 .main-nav__toggle {
   position: absolute;
-  top: 10px;
-  right: 20px;
+  top: 13px;
+  right: 6px;
   z-index: 2;
   display: block;
   width: 50px;
@@ -138,7 +140,7 @@
   }
 
   .main-nav--opened .main-nav__list {
-    position: absolute;
+    //position: absolute;
     top: 65px;
     right: 0;
     left: 0;
@@ -258,7 +260,7 @@
     padding: 0;
     padding-top: 18px;
     padding-bottom: 8px;
-    margin-left: 33px;
+    margin-left: 36px;
     font-size: 18px;
     line-height: 24px;
     font-weight: 400;
@@ -267,6 +269,10 @@
 
   @media (min-width: @desktop-width) {
     padding-top: 16px;
+    padding-bottom: 6px;
+    margin-left: 34px;
+    font-size: 20px;
+    line-height: 30px;
     color: @base-white;
     background-color: inherit;
   }

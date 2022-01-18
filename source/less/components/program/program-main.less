@@ -1,36 +1,37 @@
 .program-main {
   padding-top: 27px;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 7px;
+  }
 }
 
 .program-main__title {
-  margin-bottom: 41px;
+  margin-bottom: 37px;
   font-size: 36px;
   line-height: 36px;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 54px;
     font-size: 60px;
     line-height: 60px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0 110px;
   }
 }
 
 .program-main__text {
-  margin-bottom: 39px;
+  margin-bottom: 40px;
   text-transform: uppercase;
   color: @base-black;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 66px;
+    margin-bottom: 65px;
     font-size: 20px;
     line-height: 30px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0 110px;
   }
 }
