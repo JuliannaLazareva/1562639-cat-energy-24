@@ -269,12 +269,63 @@
   }
 }
 
+.example__slider-label span {
+  @media (min-width: @tablet-width) {
+    border-bottom: 1px dashed #dcdcdc;
+  }
+}
+
 .example__slider {
   max-width: 95px;
+  height: 14px;
   margin: 0 13px;
+  border-radius: 6px;
+  appearance: none;
 
   @media (min-width: @tablet-width) {
     min-width: 426px;
+    height: 6px;
     margin: 0 23px;
+    background: #dcdcdc;
+  }
+}
+
+.example__slider::-webkit-slider-thumb {
+  width: 36px;
+  height: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-radius: 6px;
+  background-color: @base-green;
+  appearance: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    background: radial-gradient(@base-green 4px, @base-white 4px);
+    border-radius: 50px;
+    border: 1px solid #cdcdcd;
+  }
+}
+
+.example__slider::-moz-range-thumb {
+  width: 36px;
+  height: 6px;
+  margin-left: 6px;
+  margin-right: 6px;
+  border-radius: 6px;
+  background-color: @base-green;
+  appearance: none;
+  cursor: pointer;
+
+  @media (min-width: @tablet-width) {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    background: radial-gradient(@base-green 4px, @base-white 4px);
+    border-radius: 50px;
+    border: 1px solid #cdcdcd;
   }
 }
