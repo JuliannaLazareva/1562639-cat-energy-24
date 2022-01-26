@@ -152,13 +152,13 @@
       </button>
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--current">
-          <a>главная</a>
+          <a class="main-nav__link">главная</a>
         </li>
         <li class="main-nav__item">
-          <a href="catalog.html">каталог продукции</a>
+          <a class="main-nav__link" href="catalog.html">каталог продукции</a>
         </li>
         <li class="main-nav__item">
-          <a href="program.html">подбор программы</a>
+          <a class="main-nav__link" href="program.html">подбор программы</a>
         </li>
       </ul>
     </nav>
@@ -171,8 +171,14 @@
         <h2 class="promo__title">Функциональное<br> питание для котов</h2>
         <p class="promo__text">Занялся собой? Займись котом!</p>
       </div>
-      <div class="promo__image-wrap page-container">
+      <div class="promo__image-wrap">
         <picture>
+          <source type="image/webp" media="(min-width: 1440px)"
+            srcset="img/functional-nutrition-desktop.webp 1x, img/functional-nutrition-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/functional-nutrition-tablet.webp 1x, img/functional-nutrition-tablet@2x.webp 2x">
+          <source type="image/webp"
+            srcset="img/functional-nutrition-mobile.webp 1x, img/functional-nutrition-mobile@2x.webp 2x">
           <source media="(min-width: 1440px)"
             srcset="img/functional-nutrition-desktop.png 1x, img/functional-nutrition-desktop@2x.png 2x">
           <source media="(min-width: 768px)"

@@ -1,16 +1,16 @@
 .promo {
-  //position: relative;
   padding-bottom: 16px;
   margin: 0 auto;
   text-align: center;
   color: @base-white;
 
   @media (min-width: @tablet-width) {
+    width: 708px;
     min-height: 810px;
     padding-left: 118px;
     text-align: left;
     color: @base-black;
-    margin-bottom: -60px;
+    margin-bottom: -58px;
   }
 
   @media (min-width: @desktop-width) {
@@ -41,15 +41,15 @@
   }
 
   @media (min-width: @tablet-width) {
-    min-height: auto;
-    padding: 40px 0;
+    width: auto;
     background-image: none;
   }
 
   @media (min-width: @desktop-width) {
-    position: absolute;
     top: 0;
-    right: -1px;
+    right: 0;
+    left: 721px;
+    width: 100%;
     max-width: 720px;
     min-height: 585px;
     padding: 55px 0;
@@ -82,32 +82,41 @@
 }
 
 .promo__title {
+  margin: 0;
   margin-bottom: 25px;
+  font-weight: 400;
+  color: @base-white;
   font-size: 36px;
   line-height: 36px;
-  color: inherit;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 41px;
     font-size: 60px;
     line-height: 60px;
+    color: @base-black;
   }
 }
 
 .promo__text {
   padding-bottom: 3px;
+  margin: 0;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-weight: 400;
+  color: @base-white;
   line-height: 14px;
   text-transform: uppercase;
-  color: inherit;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 20px;
+    color: @base-black;
   }
 }
 
 .promo__image-wrap {
   @media (max-width: @mobile-width-only) {
+    width: 280px;
+    margin: 0 auto;
     padding: 0 20px;
   }
 
@@ -124,13 +133,13 @@
   @media (min-width: @tablet-width) {
     width: 710px;
     height: 610px;
-    margin-left: -60px;
+    margin-left: -88px;
   }
 
   @media (min-width: @desktop-width) {
     position: relative;
     top: -292px;
-    left: 429px;
+    left: 456px;
     width: 552px;
     height: 499px;
     margin-bottom: -295px;

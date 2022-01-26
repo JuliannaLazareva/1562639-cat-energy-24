@@ -31,7 +31,10 @@
 }
 
 .example__title {
+  margin: 0;
   margin-bottom: 40px;
+  font-weight: 400;
+  color: @base-black;
   font-size: 36px;
   line-height: 40px;
 
@@ -58,9 +61,13 @@
 }
 
 .example__content {
+  margin: 0;
+  margin-bottom: 20px;
+  font-family: "Arial", "Helvetica", sans-serif;
+
   @media (min-width: @tablet-width) {
     max-width: 700px;
-    margin-bottom: 54px;
+    margin-bottom: 53px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -78,10 +85,12 @@
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
+    padding-bottom: 59px;
   }
 
   @media (min-width: @desktop-width) {
     flex-direction: column;
+    padding-bottom: 66px;
   }
 }
 
@@ -89,6 +98,10 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 21px;
+  padding: 0;
+  list-style-type: none;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -101,7 +114,14 @@
     grid-column: 1/-1;
     grid-row: 1/2;
     max-width: 366px;
+    margin-bottom: 43px;
   }
+}
+
+.example__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .example__list--weight {
@@ -120,14 +140,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
 }
 
 .example__value {
+  margin: 0;
+  font-weight: 400;
+  color: @base-black;
   font-size: 24px;
   line-height: 24px;
-  color: @base-black;
   text-align: center;
-  border: 1px solid @products-card-border;
+  border: 1px solid @light-grey;
   border-radius: 3px;
 
   @media (min-width: @tablet-width) {
@@ -155,6 +180,7 @@
 .example__parameter {
   padding: 0 14px;
   margin-top: -10px;
+  font-family: "Arial", "Helvetica", sans-serif;
   font-size: 12px;
   line-height: 12px;
   text-align: center;
@@ -182,12 +208,17 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 2px;
+  font-weight: 400;
+  color: @base-black;
 
   @media (min-width: @tablet-width) {
     max-width: 330px;
     grid-column: 2/3;
     grid-row: 1/-1;
     display: block;
+    margin-bottom: 0;
     padding-top: 11px;
     font-size: 20px;
     line-height: 20px;
@@ -198,14 +229,14 @@
     justify-content: flex-start;
     grid-column: 1/-1;
     grid-row: 2/3;
-    padding-top: 13px;
   }
 }
 
 .example__text {
+  margin: 0;
+  margin-right: 5px;
   text-transform: uppercase;
   text-align: center;
-  margin-right: 5px;
 
   @media (min-width: @tablet-width) {
     grid-column: 2/3;
@@ -221,6 +252,8 @@
 }
 
 .example__number {
+  margin: 0;
+
   @media (min-width: @tablet-width) {
     grid-column: 2/3;
     grid-row: 2/3;
@@ -244,17 +277,20 @@
 }
 
 .example__slider-image {
-  padding-bottom: 15px;
+  padding-bottom: 17px;
 
   @media (min-width: @tablet-width) {
     width: 592px;
     height: 511px;
-    padding-bottom: 23px;
+    padding-bottom: 20px;
   }
 }
 
 .example__slider-label {
-  padding-bottom: 46px;
+  padding-bottom: 45px;
+  margin: 0;
+  font-weight: 400;
+  color: @base-black;
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
@@ -262,7 +298,7 @@
 
   @media (min-width: @tablet-width) {
     width: 100%;
-    padding-bottom: 62px;
+    padding-bottom: 66px;
     font-size: 20px;
     line-height: 30px;
     background-color: @example-bg;
@@ -271,21 +307,23 @@
 
 .example__slider-label span {
   @media (min-width: @tablet-width) {
+    position: relative;
+    top: 5px;
     border-bottom: 1px dashed #dcdcdc;
   }
 }
 
 .example__slider {
-  max-width: 95px;
+  max-width: 85px;
   height: 14px;
-  margin: 0 13px;
+  margin: 0 15px;
   border-radius: 6px;
   appearance: none;
 
   @media (min-width: @tablet-width) {
     min-width: 426px;
     height: 6px;
-    margin: 0 23px;
+    margin: 0 19px;
     background: #dcdcdc;
   }
 }

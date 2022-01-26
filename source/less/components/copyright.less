@@ -1,0 +1,33 @@
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.copyright__link:focus {
+  outline: none;
+}
+
+.copyright__link:hover .copyright__icon,
+.copyright__link:focus .copyright__icon {
+  fill: @base-green;
+}
+
+.copyright__text {
+  font-family: "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  color: @special-dark-grey;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 17px;
+  }
+}
+
+.copyright__icon {
+  margin-right: -6px;
+  fill: @social;
+}
