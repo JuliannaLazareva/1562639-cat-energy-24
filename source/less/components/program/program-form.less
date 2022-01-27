@@ -256,6 +256,21 @@
   outline: 1px solid @form-border;
 }
 
+.program-form__field[type="number"]::-webkit-outer-spin-button,
+.program-form__field[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.program-form__field[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.program-form__field[type="number"]:hover,
+.program-form__field[type="number"]:focus {
+  -moz-appearance: number-input;
+}
+
 .program-form__field:focus {
   outline: 2px solid @special-dark-grey;
 }
@@ -264,21 +279,32 @@
   outline: 2px solid @light-grey;
 }
 
-.program-form__field--error {
+/*.program-form__field--error*/
+.program-form__field:required:invalid {
   outline: 2px solid #ff8282;
   outline-offset: -2px;
 }
 
 .program-form__field::placeholder {
+  font-family: "Oswald", "Arial", "Helvetica", sans-serif;
   font-size: 16px;
   line-height: 18px;
   color: @special-dark-grey;
+  opacity: 1;
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
   }
 }
+
+/*.program-form__field::-moz-placeholder {
+  color: @special-dark-grey;
+}
+
+.program-form__field:-moz-placeholder {
+  color: @special-dark-grey;
+}*/
 
 .program-form__field--name {
   width: 227px;
