@@ -87,7 +87,7 @@
   position: absolute;
   top: -73px;
   left: 201px;
-  right: -20px;
+  right: -9999px;
   height: 2px;
   background-color: #68b738;
   content: "";
@@ -95,11 +95,9 @@
   @media (min-width: @tablet-width) {
     top: -90px;
     left: 555px;
-    right: -69px;
   }
 
   @media (min-width: @desktop-width) {
-    right: -110px;
     left: 553px;
   }
 }
@@ -138,7 +136,7 @@
   position: absolute;
   top: -48px;
   left: 143px;
-  right: -20px;
+  right: -9999px;
   height: 2px;
   background-color: #68b738;
   content: "";
@@ -146,12 +144,10 @@
   @media (min-width: @tablet-width) {
     top: -90px;
     left: 219px;
-    right: -69px;
   }
 
   @media (min-width: @desktop-width) {
     top: -91px;
-    right: -110px;
     left: 223px;
   }
 }
@@ -176,21 +172,20 @@
 .program-form__group--additional::before {
   position: absolute;
   top: -49px;
+  right: -9999px;
+  bottom: 0;
   left: 164px;
-  right: -20px;
   height: 2px;
-  background-color: #68b738;
+  background: #68b738;
   content: "";
 
   @media (min-width: @tablet-width) {
     top: -90px;
     left: 251px;
-    right: -69px;
   }
 
   @media (min-width: @desktop-width) {
     top: -91px;
-    right: -110px;
   }
 }
 
@@ -279,7 +274,7 @@
   outline: 2px solid @light-grey;
 }
 
-.program-form__field--error{
+.program-form__field--error {
   outline: 2px solid #ff8282;
   outline-offset: -2px;
 }

@@ -36,7 +36,7 @@
     position: absolute;
     top: 14px;
     left: 247px;
-    right: -20px;
+    right: -9999px;
     height: 2px;
     background-color: #68b738;
     content: "";
@@ -44,13 +44,11 @@
     @media (min-width: @tablet-width) {
       left: 411px;
       top: 22px;
-      right: -30px;
     }
 
     @media (min-width: @desktop-width) {
       left: 373px;
       top: 23px;
-      right: -110px;
     }
   }
 
@@ -123,14 +121,14 @@
     position: absolute;
     top: -1px;
     bottom: 1px;
-    left: -20px;
+    left: 0;
     right: 0;
     content: "";
     height: 1px;
     background-color: @border;
   }
 
-  &::after {
+  /*&::after {
     position: absolute;
     top: -1px;
     bottom: 1px;
@@ -139,7 +137,7 @@
     content: "";
     height: 1px;
     background-color: @border;
-  }
+  }*/
 }
 
 .additional__button {
